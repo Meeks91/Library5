@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import com.dk.view.drop.CoverManager.OnDragCompeteListener;
 
+public String colourOfWaterDrop = "#303F9F"; 
+
 public class WaterDrop extends RelativeLayout {
     private Paint mPaint = new Paint();
     private TextView mTextView;
@@ -69,7 +71,7 @@ public class WaterDrop extends RelativeLayout {
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
-        mPaint.setColor(Color.parseColor("#303F9F"));
+        mPaint.setColor(Color.parseColor(colourOfWaterDrop));
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, getWidth() / 2, mPaint);
         super.dispatchDraw(canvas);
     }
