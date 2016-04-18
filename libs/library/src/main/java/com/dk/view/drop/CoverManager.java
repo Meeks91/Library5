@@ -117,6 +117,9 @@ public class CoverManager {
         params.width = -1;
         params.format = 1;
         params.flags = 16;
+        params.flags = params.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS; // MEEKS we needs this to make the status bar not turn black.
+																//If we don't set this primaryDark colour of the status bar wont get drawn when the bubble and the surfaceView it draws on is added to the window
+  
         this.mWindowManager.addView(this.mDropCover, params);
     }
 
