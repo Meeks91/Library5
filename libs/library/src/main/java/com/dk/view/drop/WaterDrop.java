@@ -18,19 +18,26 @@ import android.widget.TextView;
 
 import com.dk.view.drop.CoverManager.OnDragCompeteListener;
 
-public String colourOfWaterDrop = "#303F9F"; 
-
 public class WaterDrop extends RelativeLayout {
+    private String colourOfWaterDrop = "#303F9F"; //Meeks I set the default colour 
     private Paint mPaint = new Paint();
     private TextView mTextView;
     private OnDragCompeteListener mOnDragCompeteListener;
     private boolean mHolderEventFlag;
 
 
-    public WaterDrop(Context context) {
+    public WaterDrop(Context context, String colourOfWaterDrop) {
         super(context);
         init();
-    }
+        
+        //Meeks, I added this way of setting the colour of the WaterDrop in the constructor 
+        if(colourOfWaterDrop != null {
+                this.colourOfWaterDrop = colourOfWaterDrop; 
+        } 
+        
+      
+        
+        }
 
     public WaterDrop(Context context, AttributeSet attrs) {
         super(context, attrs);
